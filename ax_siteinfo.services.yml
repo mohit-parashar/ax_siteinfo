@@ -1,0 +1,9 @@
+services:
+  # Ax site route subscriber
+  ax_site.route_subscriber:
+    # Tell Drupal which class to use
+    class: 'Drupal\ax_siteinfo\Routing\AxSiteRouteSubscriber'
+    # This next code is the key, as it tells Drupal to use our class when
+    # building routes.
+    tags:
+      - { name: event_subscriber }

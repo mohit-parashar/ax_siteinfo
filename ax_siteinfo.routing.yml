@@ -1,0 +1,18 @@
+# Ax site route
+ax_site_api.get:
+  # Tell Drupal which path need to register
+  path: '/page_json/{apikey}/{node}'
+  # Tell Drupal which method needs to use GET POST etc
+  methods:  [GET]
+  # Tell Drupal which class to use
+  defaults:
+    _controller: '\Drupal\ax_siteinfo\Controller\AxRestController::get'
+  # Parameters siteapikey and node object
+    apikey: 'siteapikey'
+  options:
+    parameters:
+      node:
+        type: entity:node
+  # Tell Drupal to use custom access method inorder to user resource
+  requirements:
+    _custom_access: '\Drupal\ax_siteinfo\Controller\AxRestController::access'

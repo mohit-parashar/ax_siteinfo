@@ -1,0 +1,10 @@
+# Tell Drupal module name
+name: Axelerant Site Information
+# Description about module
+description: Provides a an extra text field named Site API Key added to the "Site Information" form.
+# Tell Drupal under which category module belong
+package: Custom
+# Tell Drupal if its module or theme
+type: module
+# Tell Drupal a base version
+core: 8.x
